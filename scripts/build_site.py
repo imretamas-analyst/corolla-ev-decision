@@ -207,6 +207,7 @@ def page_habits(d):
     by_road = {r["road_type"]: r for r in fr}
     city_fuel = by_road.get("city", {}).get("fuel_l_per_100km", 0)
     hw_fuel = by_road.get("highway", {}).get("fuel_l_per_100km", 0)
+    overall_fuel = by_road.get("overall", {}).get("fuel_l_per_100km", 0)
     # headline highway share: full-coverage routed+calibrated if available, else measured subset
     hw_share = rt["full"]["hw_pct"] if rt else b["highway_share_pct"]
     hw_label = "distance on highway" if rt else "highway (2022-24 only)"
@@ -225,14 +226,14 @@ def page_habits(d):
       <div class="kpi"><div class="v">{o['countries_visited']}</div><div class="l">countries visited</div></div>
     </div>
 
-    <div class="card"><h2 style="margin-top:0">Fuel: highway vs city</h2>
-      <p class="note">A hybrid is least efficient at steady highway speed and best in town
+    <div class="card"><h2 style="margin-top:0">Fuel: town vs highway</h2>
+      <p class="note">A hybrid is least efficient at steady highway speed and leaner in town
       (electric assist + regen) &mdash; so the usual pattern flips.</p>
       <div id="fuelbars"></div>
-      <p class="note">{(rt['full']['hw_pct'] if rt else ds['hw_pct']):.0f}% of the distance is highway, where the
-      hybrid is at its thirstiest ({hw_fuel} l/100&nbsp;km) &mdash; yet it still averages ~5, which is
-      the headline: a strong number precisely <i>because</i> so much of the driving is the kind hybrids
-      handle least well.</p>
+      <p class="note">{(rt['full']['hw_pct'] if rt else ds['hw_pct']):.0f}% of the distance is highway, the
+      hybrid's thirstiest setting ({hw_fuel} l/100&nbsp;km) &mdash; yet all driving combined still averages
+      {overall_fuel} l/100&nbsp;km, a strong number precisely <i>because</i> so much of it is the kind of
+      driving hybrids handle least well.</p>
     </div>
 
     <div class="card"><h2 style="margin-top:0">Driving behaviour <span class="note" style="font-weight:400">&middot; measured 2022-24</span></h2>
@@ -263,7 +264,7 @@ def page_habits(d):
       <div><div class="bar" style="width:${Math.max(2,100*r.v/max)}%;background:${r.color||'var(--accent)'}"></div></div>
       <div class="val">${fmt(r.v)}</div></div>`).join('');}
     const fuel=D.fuel_road.map(r=>({nm:r.road_type+' ('+Math.round(r.total_km).toLocaleString()+' km)',
-      v:r.fuel_l_per_100km,color:r.road_type==='highway'?'var(--bad)':'var(--good)'}));
+      v:r.fuel_l_per_100km,color:r.road_type==='highway'?'var(--bad)':(r.road_type==='overall'?'#6b7785':'var(--good)')}));
     bars(document.getElementById('fuelbars'),fuel,v=>v.toFixed(1)+' l/100km');
     const km=[];
     for(let m=1;m<=12;m++){const r=byM[m];
