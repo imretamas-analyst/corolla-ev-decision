@@ -1,0 +1,4 @@
+energy_type,eur_per_unit,co2_kg_per_unit
+petrol_l,1.87,2.31
+electricity_home_kwh,0.33,0.35
+electricity_public_kwh,0.60,0.35

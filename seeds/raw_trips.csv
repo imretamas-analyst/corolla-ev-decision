@@ -1,0 +1,25 @@
+trip_id,departure,dep_lat,dep_lng,departure_time,destination,des_lat,des_lng,arrival_time,distance_km,fuel_l_per_100km,year,month,minutes_driven,country
+t001,"Sample Street 10, 10000 Hometown",52.5000,13.4000,2/13/2022 11:25,"Market Square 3, Old Town",48.2000,16.3700,2/13/2022 11:34,2.16,8.472,2022,2,9,Country A
+t002,"Sample Street 10, 10000 Hometown",52.5000,13.4000,2/13/2022 14:36,"Beach Blvd 9, Coast City",45.8000,15.9700,2/13/2022 14:50,4.427,6.257,2022,2,14,Country A
+t003,"Sample Street 10, 10000 Hometown",52.5000,13.4000,2/19/2022 13:32,"Sample Street 10, 10000 Hometown",52.5000,13.4000,2/19/2022 14:22,14.146,4.701,2022,2,50,Country A
+t004,"Sample Street 10, 10000 Hometown",52.5000,13.4000,3/17/2022 10:41,"Central Plaza 1, Sample City",52.5200,13.4050,3/17/2022 10:49,2.078,8.807,2022,3,8,Country A
+t005,"Sample Street 10, 10000 Hometown",52.5000,13.4000,4/15/2022 14:16,"Riverside Ave 5, Lake Town",49.0000,17.1000,4/15/2022 14:36,5.679,5.952,2022,4,20,Country A
+t006,"Sample Street 10, 10000 Hometown",52.5000,13.4000,4/20/2022 13:11,"Hill Road 7, Mountain Village",47.5000,19.0500,4/20/2022 16:22,247.5,5.502,2022,4,191,Country A
+t007,"Central Plaza 1, Sample City",52.5200,13.4050,4/23/2022 13:37,"Sample Street 10, 10000 Hometown",52.5000,13.4000,4/23/2022 16:20,245.058,5.066,2022,4,163,Country A
+t008,"Sample Street 10, 10000 Hometown",52.5000,13.4000,5/21/2022 17:39,"Beach Blvd 9, Coast City",45.8000,15.9700,5/21/2022 18:19,13.89,4.629,2022,5,40,Country A
+t009,"Sample Street 10, 10000 Hometown",52.5000,13.4000,5/26/2022 10:35,"Forest Lane 2, Pine Hamlet",50.7000,12.9000,5/26/2022 12:26,124.116,4.921,2022,5,111,Country A
+t010,"Market Square 3, Old Town",48.2000,16.3700,5/26/2022 13:19,"Central Plaza 1, Sample City",52.5200,13.4050,5/26/2022 16:04,219.805,5.035,2022,5,165,Country B
+t011,"Beach Blvd 9, Coast City",45.8000,15.9700,5/29/2022 13:51,"Sample Street 10, 10000 Hometown",52.5000,13.4000,5/29/2022 16:04,160.088,4.57,2022,5,133,Country A
+t012,"Sample Street 10, 10000 Hometown",52.5000,13.4000,7/3/2022 11:22,"Hill Road 7, Mountain Village",47.5000,19.0500,7/3/2022 11:57,22.655,3.672,2022,7,35,Country A
+t013,"Sample Street 10, 10000 Hometown",52.5000,13.4000,7/17/2022 8:35,"Market Square 3, Old Town",48.2000,16.3700,7/17/2022 11:30,251.277,5.289,2022,7,175,Country B
+t014,"Riverside Ave 5, Lake Town",49.0000,17.1000,7/17/2022 14:17,"Beach Blvd 9, Coast City",45.8000,15.9700,7/17/2022 17:16,317.557,4.893,2022,7,179,Country B
+t015,"Hill Road 7, Mountain Village",47.5000,19.0500,7/18/2022 10:48,"Forest Lane 2, Pine Hamlet",50.7000,12.9000,7/18/2022 10:53,2.378,2.355,2022,7,5,Country B
+t016,"Market Square 3, Old Town",48.2000,16.3700,7/18/2022 19:28,"Central Plaza 1, Sample City",52.5200,13.4050,7/18/2022 20:01,29.314,3.364,2022,7,33,Country B
+t017,"Beach Blvd 9, Coast City",45.8000,15.9700,7/24/2022 9:36,"Riverside Ave 5, Lake Town",49.0000,17.1000,7/24/2022 12:25,274.53,5.617,2022,7,169,Country B
+t018,"Forest Lane 2, Pine Hamlet",50.7000,12.9000,7/24/2022 15:16,"Sample Street 10, 10000 Hometown",52.5000,13.4000,7/24/2022 17:57,252.567,4.938,2022,7,161,Country A
+t019,"Sample Street 10, 10000 Hometown",52.5000,13.4000,8/2/2022 11:02,"Market Square 3, Old Town",48.2000,16.3700,8/2/2022 14:04,284.585,5.093,2022,8,182,Country B
+t020,"Riverside Ave 5, Lake Town",49.0000,17.1000,8/2/2022 14:31,"Beach Blvd 9, Coast City",45.8000,15.9700,8/2/2022 18:51,449.1,4.999,2022,8,260,Country B
+t021,"Hill Road 7, Mountain Village",47.5000,19.0500,8/7/2022 10:54,"Forest Lane 2, Pine Hamlet",50.7000,12.9000,8/7/2022 12:32,132.598,4.652,2022,8,98,Country B
+t022,"Market Square 3, Old Town",48.2000,16.3700,8/14/2022 11:01,"Central Plaza 1, Sample City",52.5200,13.4050,8/14/2022 11:32,24.833,4.188,2022,8,31,Country B
+t023,"Beach Blvd 9, Coast City",45.8000,15.9700,8/14/2022 18:23,"Riverside Ave 5, Lake Town",49.0000,17.1000,8/14/2022 19:12,52.582,3.872,2022,8,49,Country B
+t024,"Forest Lane 2, Pine Hamlet",50.7000,12.9000,5/22/2022 13:39,"Sample Street 10, 10000 Hometown",52.5000,13.4000,5/22/2022 14:07,10.232,3.675,2022,5,28,Country A

@@ -1,0 +1,6 @@
+car_id,make,model,powertrain,battery_kwh_gross,wltp_consumption,consumption_unit,purchase_price_eur,has_heat_pump
+corolla,Toyota,Corolla 1.8 Hybrid,HEV,,4.5,l_per_100km,24500,FALSE
+corolla_ice,Toyota,Corolla 1.2 Turbo,ICE,,5.8,l_per_100km,22000,FALSE
+ev6,Kia,EV6 RWD 84 kWh,BEV,84,16.5,kwh_per_100km,51990,TRUE
+ioniq5,Hyundai,Ioniq 5 RWD 84 kWh,BEV,84,16.9,kwh_per_100km,52000,TRUE
+id4,Volkswagen,ID.4 Pro 82 kWh,BEV,82,15.4,kwh_per_100km,48000,TRUE

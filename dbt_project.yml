@@ -1,0 +1,22 @@
+name: 'ev_decision'
+version: '1.0.0'
+profile: 'ev_decision'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  ev_decision:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table
+
+seeds:
+  ev_decision:
+    +quote_columns: false

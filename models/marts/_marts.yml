@@ -1,0 +1,61 @@
+version: 2
+
+models:
+  - name: dim_car
+    description: "Candidate-car dimension."
+    columns:
+      - name: car_id
+        data_tests: [not_null, unique]
+
+  - name: fct_trip_car_scenarios
+    description: >
+      Every trip costed under every candidate car and source (wltp / spritmonitor /
+      actual). Grain: trip x car x source. Temperature-driven cold-weather factor.
+    columns:
+      - name: scenario_id
+        data_tests: [not_null, unique]
+      - name: car_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_car')
+                field: car_id
+      - name: energy_cost_eur
+        data_tests: [not_null]
+
+  - name: agg_car_annual
+    description: "Per-car, per-source roll-up for headline numbers."
+    columns:
+      - name: car_id
+        data_tests: [not_null]
+
+  - name: agg_corolla_vs_spritmonitor
+    description: "Corolla: your actual l/100km vs community Spritmonitor vs WLTP."
+    columns:
+      - name: source
+        data_tests: [not_null]
+
+  - name: mart_ev_decision
+    description: "Green-premium decision table: saving, CO2 avoided, payback, EUR/tonne."
+    columns:
+      - name: car_id
+        data_tests: [not_null, unique]
+
+  - name: mart_monthly_habits
+    description: "Driving habits by calendar month (seasonality, countries, highway proxy)."
+    columns:
+      - name: month
+        data_tests: [not_null, unique]
+  - name: mart_driving_overview
+    description: "Single-row headline driving stats over the whole dataset."
+
+  - name: mart_fuel_by_road_type
+    description: "Fuel consumption split by dominant road type (measured highway km)."
+    columns:
+      - name: road_type
+        data_tests: [not_null, unique]
+  - name: mart_driving_behaviour
+    description: "Overall measured driving-behaviour stats from telematics."
+
+  - name: mart_hybrid_vs_conventional
+    description: "Hybrid premium payback vs a comparable non-hybrid, on actual driving."

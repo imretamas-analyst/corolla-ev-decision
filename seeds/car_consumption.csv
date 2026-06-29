@@ -1,0 +1,11 @@
+car_id,source,consumption_unit,consumption_avg,sample_size,consumption_min,consumption_max,verified
+corolla,wltp,l_per_100km,4.5,,,,TRUE
+corolla,spritmonitor,l_per_100km,5.19,359,3.46,8.19,TRUE
+corolla_ice,wltp,l_per_100km,5.8,,,,FALSE
+corolla_ice,spritmonitor,l_per_100km,6.8,,,,FALSE
+ev6,wltp,kwh_per_100km,16.5,,,,TRUE
+ev6,spritmonitor,kwh_per_100km,21.99,181,11.73,41.25,TRUE
+ioniq5,wltp,kwh_per_100km,16.9,,,,TRUE
+ioniq5,spritmonitor,kwh_per_100km,21.26,248,14.79,72.55,TRUE
+id4,wltp,kwh_per_100km,15.4,,,,TRUE
+id4,spritmonitor,kwh_per_100km,20.86,293,10.34,30.55,TRUE

@@ -1,0 +1,59 @@
+version: 2
+
+models:
+  - name: stg_trips
+    description: "Cleaned, typed trip facts from the car's telematics export."
+    columns:
+      - name: trip_id
+        data_tests: [not_null, unique]
+      - name: distance_km
+        data_tests: [not_null]
+
+  - name: stg_cars
+    description: "Candidate cars (the dimension the user selects)."
+    columns:
+      - name: car_id
+        data_tests: [not_null, unique]
+      - name: powertrain
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['HEV', 'BEV', 'ICE']
+
+  - name: stg_car_consumption
+    description: "Consumption per car in long format, one row per source."
+    columns:
+      - name: source
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['wltp', 'spritmonitor']
+      - name: car_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_cars')
+                field: car_id
+
+  - name: stg_energy_prices
+    columns:
+      - name: energy_type
+        data_tests: [not_null, unique]
+
+  - name: stg_monthly_temperature
+    description: "Monthly mean temperature by climate region across the data range."
+    columns:
+      - name: avg_temp_c
+        data_tests: [not_null]
+
+  - name: stg_temperature_factor
+    description: "Temperature -> consumption multiplier, per powertrain type."
+    columns:
+      - name: temp_min
+        data_tests: [not_null]
+
+  - name: stg_trip_temperature
+    description: "Real per-trip mean temperature (from fetch_temperature.py)."
+    columns:
+      - name: trip_id
+        data_tests: [not_null]
